@@ -20,6 +20,7 @@ A lightweight expense tracker with two ways to manage your spending:
 | `index.html` | Web dashboard markup |
 | `styles.css` | Responsive web dashboard styling |
 | `app.js` | Dashboard interactions and browser storage |
+| `assets/ledgerify-icon.svg` | Ledgerify app icon and browser favicon |
 | `tracker.py` | Original Python command-line tracker |
 | `expenses.csv` | Expense data used by the CLI and as the dashboard's initial sample data |
 

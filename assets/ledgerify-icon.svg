@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">Ledgerify icon</title>
+  <desc id="desc">A stylized L and ledger lines on an indigo rounded square.</desc>
+  <defs>
+    <linearGradient id="background" x1="30" y1="18" x2="226" y2="242" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6D66EA"/>
+      <stop offset="1" stop-color="#433CA8"/>
+    </linearGradient>
+  </defs>
+  <rect width="256" height="256" rx="58" fill="url(#background)"/>
+  <path d="M73 60v118c0 11.046 8.954 20 20 20h72" fill="none" stroke="#D9F3E7" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"/>
+  <path d="M133 91h53M133 128h53M133 165h35" fill="none" stroke="#BBB7FF" stroke-linecap="round" stroke-width="15"/>
+  <circle cx="184" cy="165" r="9" fill="#F6D287"/>
+</svg>
