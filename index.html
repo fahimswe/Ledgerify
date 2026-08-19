@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f7f7fb" />
+    <title>Ledgerly — Expense tracker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <aside class="sidebar">
+        <a class="brand" href="#top" aria-label="Ledgerly home"><span class="brand-mark">L</span><span>Ledgerly</span></a>
+        <nav aria-label="Main navigation">
+          <a class="nav-link active" href="#overview">Overview</a>
+          <a class="nav-link" href="#expenses">All expenses</a>
+          <a class="nav-link" href="#add-expense">Add expense</a>
+        </nav>
+        <p class="sidebar-note">Take care of the small things. They add up.</p>
+      </aside>
+
+      <section class="content" id="top">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow" id="today-label"></p>
+            <h1>Good to see you.</h1>
+          </div>
+          <button class="avatar" type="button" title="Your profile">F</button>
+        </header>
+
+        <section class="hero" id="overview" aria-labelledby="balance-title">
+          <div>
+            <p class="eyebrow">This month’s spending</p>
+            <h2 id="balance-title" data-month-total>$0.00</h2>
+            <p class="hero-copy">Track every choice, without the clutter.</p>
+          </div>
+          <div class="hero-art" aria-hidden="true"><span></span><i></i><b></b></div>
+        </section>
+
+        <section class="metrics" aria-label="Expense summary">
+          <article class="metric-card"><p>Total recorded</p><strong data-total>$0.00</strong><span>Across all expenses</span></article>
+          <article class="metric-card"><p>Top category</p><strong data-top-category>—</strong><span data-top-category-total>No expenses yet</span></article>
+          <article class="metric-card"><p>Entries</p><strong data-count>0</strong><span>Expenses logged</span></article>
+        </section>
+
+        <section class="workspace">
+          <section class="expense-panel" id="expenses" aria-labelledby="expenses-heading">
+            <div class="section-heading">
+              <div><p class="eyebrow">Your activity</p><h2 id="expenses-heading">Recent expenses</h2></div>
+              <label class="search"><span>⌕</span><input id="search" type="search" placeholder="Search expenses" /></label>
+            </div>
+            <div class="table-wrap">
+              <table>
+                <thead><tr><th>Date</th><th>Category</th><th>Description</th><th>Amount</th><th><span class="sr-only">Actions</span></th></tr></thead>
+                <tbody id="expense-list"></tbody>
+              </table>
+              <p class="empty-state" id="empty-state" hidden>No matching expenses. Try a different search.</p>
+            </div>
+          </section>
+
+          <aside class="add-card" id="add-expense">
+            <p class="eyebrow">New entry</p>
+            <h2>Add an expense</h2>
+            <form id="expense-form">
+              <label>Date<input name="date" type="date" required /></label>
+              <label>Category<input name="category" type="text" placeholder="e.g. Groceries" maxlength="30" required /></label>
+              <label>Amount<input name="amount" type="number" placeholder="0.00" min="0.01" step="0.01" required /></label>
+              <label>Description<input name="description" type="text" placeholder="What was this for?" maxlength="80" required /></label>
+              <button class="primary-button" type="submit">Save expense <span>→</span></button>
+            </form>
+            <p class="form-message" id="form-message" aria-live="polite"></p>
+          </aside>
+        </section>
+      </section>
+    </main>
+    <template id="expense-row">
+      <tr><td class="date-cell"></td><td><span class="category-tag"></span></td><td class="description-cell"></td><td class="amount-cell"></td><td><button class="delete-button" type="button" aria-label="Delete expense">×</button></td></tr>
+    </template>
+    <script src="app.js"></script>
+  </body>
+</html>
