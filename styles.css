@@ -5,7 +5,7 @@ body { margin:0; background:var(--canvas); color:var(--ink); font-family:"DM San
 .shell { min-height:100vh; display:grid; grid-template-columns:224px minmax(0,1fr); }
 .sidebar { position:sticky; top:0; height:100vh; padding:36px 26px; background:#202335; color:#fff; display:flex; flex-direction:column; }
 .brand { display:flex; align-items:center; gap:10px; color:#fff; text-decoration:none; font-family:"Playfair Display",serif; font-size:24px; }
-.brand-mark { display:grid; place-items:center; width:30px; height:30px; border-radius:9px; background:#a49df5; color:#242641; font:700 18px "DM Sans",sans-serif; }
+.brand-mark { width:32px; height:32px; border-radius:10px; }
 nav { margin-top:72px; display:grid; gap:8px; }.nav-link { padding:12px 14px; border-radius:8px; color:#b9bbca; text-decoration:none; font-size:14px; }.nav-link:hover,.nav-link.active { color:#fff; background:#34384e; }
 .sidebar-note { margin-top:auto; color:#9c9fb1; font-size:13px; line-height:1.6; max-width:130px; }
 .content { width:min(1250px,100%); margin:0 auto; padding:44px clamp(24px,5vw,72px) 64px; }.topbar { display:flex; justify-content:space-between; align-items:center; margin-bottom:30px; }.eyebrow { margin:0 0 7px; color:var(--muted); font-size:12px; letter-spacing:.11em; text-transform:uppercase; font-weight:700; }.topbar h1,.section-heading h2,.add-card h2 { margin:0; font-family:"Playfair Display",serif; }.topbar h1 { font-size:32px; }.avatar { width:38px; height:38px; border:0; border-radius:50%; background:var(--mint); color:#20634b; font-weight:700; }
