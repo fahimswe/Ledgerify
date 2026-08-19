@@ -1,4 +1,4 @@
-# Expense Tracker
+# Ledgerify
 
 A lightweight expense tracker with two ways to manage your spending:
 
@@ -51,6 +51,6 @@ Choose an option from the displayed menu to add an expense, view all entries, se
 ## Clone the project
 
 ```bash
-git clone https://github.com/fahimswe/expense_tracker.git
-cd expense_tracker
+git clone https://github.com/fahimswe/Ledgerify.git
+cd Ledgerify
 ```

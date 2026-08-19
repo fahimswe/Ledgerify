@@ -1,4 +1,4 @@
-const storageKey = "ledgerly-expenses";
+const storageKey = "ledgerify-expenses";
 const seedExpenses = [
   { date: "2025-07-25", category: "Food", amount: 15.50, description: "Lunch at restaurant" },
   { date: "2025-07-25", category: "Transport", amount: 5, description: "Bus fare" },
@@ -13,7 +13,7 @@ const seedExpenses = [
   { date: "2025-07-27", category: "Food", amount: 100, description: "Cake" }
 ];
 
-let expenses = JSON.parse(localStorage.getItem(storageKey) || "null") || seedExpenses;
+let expenses = JSON.parse(localStorage.getItem(storageKey) || localStorage.getItem("ledgerly-expenses") || "null") || seedExpenses;
 const currency = new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" });
 const dateFormatter = new Intl.DateTimeFormat("en-US", { month: "short", day: "numeric", year: "numeric" });
 
